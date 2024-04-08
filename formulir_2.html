@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      background-color: #fff;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    fieldset {
+      border: none;
+    }
+    legend {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: calc(100% - 10px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="date"] {
+      width: 100%;
+    }
+    input[type="radio"] {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .button-container {
+      display: flex;
+      align-items: center;
+    }
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form action="formulir_3.html" method="post">
+    <fieldset>
+      <legend>Formulir 2</legend>
+      <p>
+        <label for="nama_lengkap">Nama Lengkap :</label>
+        <input type="text" id="nama_lengkap" name="nama_lengkap" required/>
+      </p>
+
+      <p>
+        <label for="nip">N.I.P. :</label>
+        <input type="text" id="nip" name="nip" required/>
+      </p>
+
+      <p>
+        <label for="golongan">Golongan:</label>
+        <select id="golongan" name="golongan" required>
+          <option value="">Pilih Golongan</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="pangkat">Pangkat:</label>
+        <select id="pangkat" name="pangkat" required>
+          <option value="">Pilih Pangkat</option>
+          <option value="I" disabled>Golongan I</option>
+          <option value="Penata Muda">Penata Muda</option>
+          <option value="Penata">Penata</option>
+          <option value="II" disabled>Golongan II</option>
+          <option value="Penata Tingkat I">Penata Tingkat I</option>
+          <option value="Penata Tingkat II">Penata Tingkat II</option>
+          <option value="III" disabled>Golongan III</option>
+          <option value="Asisten Pembina">Asisten Pembina</option>
+          <option value="Pembina">Pembina</option>
+          <option value="Pembina Utama">Pembina Utama</option>
+          <option value="IV" disabled>Golongan IV</option>
+          <option value="Analis Kebijakan Ahli Muda">
+            Analis Kebijakan Ahli Muda
+          </option>
+          <option value="Analis Kebijakan Ahli Madya">
+            Analis Kebijakan Ahli Madya
+          </option>
+          <option value="Analis Kebijakan Ahli Utama">
+            Analis Kebijakan Ahli Utama
+          </option>
+        </select>
+      </p>
+
+      <p>
+        <label for="tempat_lahir">Tempat Lahir :</label>
+        <input type="text" id="tempat_lahir" name="tempat_lahir" required/>
+        <label for="kab_kota_lahir">Kabupaten/Kota Lahir :</label>
+        <input type="text" id="kab_kota_lahir" name="kab_kota_lahir" required/>
+      </p>
+
+      <p>
+        <label for="tanggal_lahir">Tanggal Lahir :</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required/>
+      </p>
+
+      <p>
+        <label for="jenis_kelamin">Jenis Kelamin :</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+          <option value="">Pilih Jenis Kelamin</option>
+          <option value="laki_laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="agama">Agama :</label>
+        <select name="agama" id="agama" required>
+          <option value="">Pilih Agama</option>
+          <option value="islam">Islam</option>
+          <option value="kristen">Kristen</option>
+          <option value="katolik">Katolik</option>
+          <option value="hindu">Hindu</option>
+          <option value="buddha">Buddha</option>
+          <option value="khonghucu">Khonghucu</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="status_perkawinan">Status Perkawinan :</label>
+        <input
+          type="radio"
+          id="belum_kawin"
+          name="status_perkawinan"
+          value="belum_kawin"
+        />
+        <label for="belum_kawin">Belum Kawin</label>
+        <input
+          type="radio"
+          id="kawin"
+          name="status_perkawinan"
+          value="kawin"
+        />
+        <label for="kawin">Kawin</label>
+        <input
+          type="radio"
+          id="janda_duda"
+          name="status_perkawinan"
+          value="janda_duda"
+        />
+        <label for="janda_duda">Janda/Duda</label>
+      </p>
+
+      <label>Alamat Rumah :</label>
+      <p>
+        <label for="jalan">Jalan :</label>
+        <input type="text" id="jalan" name="jalan" required/>
+      </p>
+      <p>
+        <label for="kelurahan_desa">Kelurahan/Desa :</label>
+        <input type="text" id="kelurahan_desa" name="kelurahan_desa" required/>
+      </p>
+      <p>
+        <label for="kecamatan">Kecamatan :</label>
+        <input type="text" id="kecamatan" name="kecamatan" required/>
+      </p>
+      <p>
+        <label for="kabupaten_kota">Kabupaten/Kota :</label>
+        <input type="text" id="kabupaten_kota" name="kabupaten_kota" required/>
+      </p>
+      <p>
+        <label for="provinsi">Provinsi :</label>
+        <input type="text" id="provinsi" name="provinsi" required/>
+      </p>
+
+      <label>Keterangan Tubuh :</label>
+      <p>
+        <label for="tinggi">Tinggi :</label>
+        <input type="number" id="tinggi" name="tinggi" />
+      </p>
+      <p>
+        <label for="berat_badan">Berat Badan :</label>
+        <input type="number" id="berat_badan" name="berat_badan" />
+      </p>
+      <p>
+        <label for="rambut">Rambut :</label>
+        <input type="text" id="rambut" name="rambut" />
+      </p>
+      <p>
+        <label for="bentuk_muka">Bentuk Muka :</label>
+        <input type="text" id="bentuk_muka" name="bentuk_muka" />
+      </p>
+      <p>
+        <label for="warna_kulit">Warna Kulit :</label>
+        <input type="text" id="warna_kulit" name="warna_kulit" />
+      </p>
+      <p>
+        <label for="ciri_khas">Ciri Khas :</label>
+        <input type="text" id="ciri_khas" name="ciri_khas" />
+      </p>
+      <p>
+        <label for="cacat_tubuh">Cacat Tubuh :</label>
+        <input type="text" id="cacat_tubuh" name="cacat_tubuh" />
+      </p>
+      <p>
+        <label for="hobby">Kegemaran(Hobby) :</label>
+        <input type="text" id="hobby" name="hobby" />
+      </p>
+
+    <div class="button-container">
+      <label for="submit-button">Isi formulir dengan lengkap, kemudian klik :</label>
+      <button type="submit">Selanjutnya</button>
+    </div>
+    </fieldset>
+  </form>
+</body>
+</html>
