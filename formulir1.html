@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulir 1</title>
+</head>
+
+<body>
+  <form action="formulir2.html" method="post">
+    <fieldset>
+      <legend>Formulir 1</legend>
+      <p>
+        <label for="nama_lengkap">Nama Lengkap :</label>
+        <input type="text" id="nama_lengkap" name="nama_lengkap" />
+      </p>
+
+      <p>
+        <label for="nip">NIP :</label>
+        <input type="text" id="nip" name="nip" />
+      </p>
+
+      <p>
+        <label for="golongan">Golongan:</label>
+        <select id="golongan" name="golongan">
+          <option value="">Pilih Golongan</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="pangkat">Pangkat:</label>
+        <select id="pangkat" name="pangkat">
+          <option value="">Pilih Pangkat</option>
+          <option value="I" disabled>Golongan I</option>
+          <option value="Penata Muda">Penata Muda</option>
+          <option value="Penata">Penata</option>
+          <option value="II" disabled>Golongan II</option>
+          <option value="Penata Tingkat I">Penata Tingkat I</option>
+          <option value="Penata Tingkat II">Penata Tingkat II</option>
+          <option value="III" disabled>Golongan III</option>
+          <option value="Asisten Pembina">Asisten Pembina</option>
+          <option value="Pembina">Pembina</option>
+          <option value="Pembina Utama">Pembina Utama</option>
+          <option value="IV" disabled>Golongan IV</option>
+          <option value="Analis Kebijakan Ahli Muda">
+            Analis Kebijakan Ahli Muda
+          </option>
+          <option value="Analis Kebijakan Ahli Madya">
+            Analis Kebijakan Ahli Madya
+          </option>
+          <option value="Analis Kebijakan Ahli Utama">
+            Analis Kebijakan Ahli Utama
+          </option>
+        </select>
+      </p> 
+
+      <p>
+        <label for="tempat_lahir">Tempat Lahir :</label>
+        <input type="text" id="tempat_lahir" name="tempat_lahir" />
+      </p>
+
+      <p>
+        <label for="tanggal_lahir">Tanggal Lahir :</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" />
+      </p>
+
+      <p>
+        <label for="jenis_kelamin">Jenis Kelamin :</label>
+        <select id="jenis_kelamin" name="jenis_kelamin">
+          <option value="">Pilih Jenis Kelamin</option>
+          <option value="laki_laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="agama">Agama :</label>
+        <select name="agama" id="agama">
+          <option value="">Pilih Agama</option>
+          <option value="islam">Islam</option>
+          <option value="kristen">Kristen</option>
+          <option value="katolik">Katolik</option>
+          <option value="hindu">Hindu</option>
+          <option value="buddha">Buddha</option>
+          <option value="khonghucu">Khonghucu</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="status_perkawinan">Status Perkawinan : </label>
+        <input type="radio" id="belum_kawin" name="status_perkawinan" value="belum_kawin" />
+        <label for="belum_kawin">Belum Kawin</label>
+        <input type="radio" id="kawin" name="status_perkawinan" value="kawin" />
+        <label for="kawin">Kawin</label>  
+        <input type="radio" id="janda_duda" name="status_perkawinan" value="janda_duda" />
+        <label for="janda_duda">Janda/Duda</label> 
+      </p>
+    </fieldset>
+  </form>
+</body>
+
+</html>
