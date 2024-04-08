@@ -93,7 +93,11 @@
       </p>
       <p>
         <label for="akhir_jabatan">Akhir Jabatan :</label>
-        <input type="date" id="akhir_jabatan" name="akhir_jabatan">
+        <input type="date" id="akhir_jabatan" name="akhir_jabatan" onchange="hitungLamaKerja()">
+      </p>
+      <p>
+        <label for="lama_kerja">Lama Kerja (hari) :</label>
+        <input type="text" id="lama_kerja" name="lama_kerja" readonly>
       </p>
       <p>
         <label for="gol_ruang_gaji">Gol Ruang Gaji :</label>
@@ -122,6 +126,15 @@
       </div>
     </fieldset>
 
+    <script>
+      function hitungLamaKerja() {
+        var tglMulai = new Date(document.getElementById("mulai_jabatan").value);
+        var tglSelesai = new Date(document.getElementById("akhir_jabatan").value);
+        var diffTime = Math.abs(tglSelesai - tglMulai);
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById("lama_kerja").value = diffDays;
+      }
+    </script>
   </form>
 </body>
 
